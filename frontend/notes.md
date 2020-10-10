@@ -18,3 +18,4 @@ CENTER AND RIGHT SIDE OF PAGE
 -add to cart button
 -more info button
 - when asked for more info large box will appear with information about product exit button togo backto all products
+more
