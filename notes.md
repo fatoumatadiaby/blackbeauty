@@ -21,3 +21,14 @@ user
   email: string
 
 user should be able to go on site see a list of products organized by product type and brand, when selected user should receive information about product ex description,ingrediants, and price and a add to cart button should appear allowing user to create a shopping cart full of items that will calculte the total price and check user out
+
+
+  <!-- <div class="shop-item">
+             <span class="brand-name"></span>
+             <img class="product-image-type" src="">
+             <div class="shop-item-details">
+                  <span class="brand-product-type">product type</span>
+                  <span class="brand-product-price">price</span> 
+                 <button class="add to cart" onclick="addToCart()">Add to Cart</button>
+             </div>
+         </div> -->
