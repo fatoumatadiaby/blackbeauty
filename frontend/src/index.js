@@ -1,12 +1,14 @@
-document.addEventListener("DOMContentLoaded", () => {
- fetchProducts()
-})
-const BASE_URL = 'http://localhost:3000/products'
+window.addEventListener('load', (everything))
 
+const BASE_URL = 'http://localhost:3000'
+function everything() {
+    fetchProducts()
+    
+}
 
 // read - read a list of hair products
 function fetchProducts() {
-    fetch(BASE_URL)
+    fetch(`${BASE_URL}/products`)
     .then(resp => resp.json())
     .then(products => {
         products.forEach((product) => {
