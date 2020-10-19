@@ -31,7 +31,7 @@ class Product{
                  </div>
              </div>
              <div class="flip-card-back">
-             <button class="btn btn-primary add-item" type="button">Add to Cart</button>
+             <button class="btn btn-primary" id="add-item${this.id}" onClick="addToCart()">Add to Cart</button>
 
             
                  <p>${this.directions}</p>

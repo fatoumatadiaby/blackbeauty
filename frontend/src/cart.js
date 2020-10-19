@@ -1,11 +1,12 @@
 
-
+class Cart {
+    constructor(id,product_id) {
+        this.id = id;
+        this.product_id = product_id
+    }
+}
  
-        const addItemsToCart = document.getElementsByClassName('add-item');
-            addItemsToCart.forEach(item => {
-            item.addEventListener('click', function () {
-                console.log('clicked')
-        })})
-        
-          
-        
+  function addToCart() {
+      
+  }
+ 
