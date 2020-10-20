@@ -27,13 +27,11 @@ class Product{
                 <div class="brand-two">
                   <h3> ${this.product_type}</h3>
                   <h3> ${this.price} </h3>
-                    <p class="description">${this.description}</p>
+                   
                  </div>
              </div>
              <div class="flip-card-back">
              <button class="btn btn-primary" id="add-item${this.id}" onClick="addToCart()">Add to Cart</button>
-
-            
                  <p>${this.directions}</p>
               </div>
               

@@ -6,7 +6,8 @@ class Cart {
     }
 }
  
-  function addToCart() {
-      
+  function addToCart(event) {
+     const button = event.target
+     const flipcard = button.parentElement.parent
   }
  
