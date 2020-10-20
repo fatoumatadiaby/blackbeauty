@@ -32,3 +32,61 @@ user should be able to go on site see a list of products organized by product ty
                  <button class="add to cart" onclick="addToCart()">Add to Cart</button>
              </div>
          </div> -->
+<!-->
+       removeFromCart() {
+    
+ }
+ }
+ let removeItemFromCart = document.getElementsByClassName('btn-danger')
+  for (let i = 0; i < removeItemFromCart.length; i++) {
+     let button = removeItemFromCart[i]
+     button.addEventListener('click',function(event){
+     let buttonClicked = event.target      buttonClicked.parentElement.remove
+      updateCartTotal()
+      })
+
+     function updateCartTotal(){
+         let cartItemContainer = document.getElementsByClassName('cart-content')[0]
+          let cart = cartItemContainer.getElementsByClassName('cart')
+          for (let i = 0; i < cart.length; i++) {
+             var cart = carts[i]
+          }
+     } 
+
+
+
+     <!-- 
+      <div class="cart-content">
+           <div class="cart">
+               <div class="my-cart">
+                 <h2>My cart</h2>
+              </div>
+               <div class="cart-item">
+                   section for shopping cart items
+               </div>
+               <div>item 1 </div>
+               <div>item 2</div> 
+                <button class="button" onclick="removeFromCart()" >Remove from cart</button> 
+
+                document.addEventListener("DOMContentLoaded", () => {
+ fetchProducts() 
+})
+
+
+
+
+//   button.addEventListener('click', function () {
+//             console.log('clicked');
+//  for (i = 0; 1 < addItemsToCart.length; i++) {
+//           let button = addItemsToCart[i]
+
+      let addItemsToCart = document.getElementsByClassName('add-item');
+        
+         for (i = 0; 1 < addItemsToCart.length; i++) {
+          let button = addItemsToCart[i]
+           button.addEventListener('click', function () {
+            console.log('clicked');
+        });
+           
+    }
+     <p class="description">${this.description}</p>

@@ -1,18 +1,23 @@
-window.addEventListener('load', (everything))
+const url = "http://localhost:3000/products"
 
-const BASE_URL = 'http://localhost:3000'
-function everything() {
-    fetchProducts()
-   
-}
+document.addEventListener('DOMContentLoaded', () => {
+  fetchProducts()
+  const createShoppingCart = document.getElementsByClassName("container content-section")
+})
 
 function fetchProducts() {
-    fetch(`${BASE_URL}/products`)
-    .then(resp => resp.json())
-    .then(products => {
-        products.forEach((product) => {
-             let newProduct = new Product(product.id, product.brand, product.product_type, product.ingrediants, product.description, product.directions, product.price)
-             newProduct.renderProduct(product.id, product.brand, product.product_type, product.ingrediants, product.description, product.directions, product.price)
-            })
-    })}
+  fetch(url)
+  .then(response => response.json())
+  .then(products => {
+      products.data.forEach(product => {
+        let newProduct = new Product(product, product.attributes)
+         document.querySelector('#product-inventory').innerHTML += newProduct.renderProduct()
+
+      })
+    } )
+    }
+   
+
+
+
          
