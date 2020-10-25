@@ -90,3 +90,29 @@ user should be able to go on site see a list of products organized by product ty
            
     }
      <p class="description">${this.description}</p>
+
+
+
+
+    }
+}
+
+
+// function addtocart() {
+//   const findCart =  document.getElementsByClassName("container content-section")
+   
+
+
+// }
+let total = 0;
+   
+function calculateToal(id, price) {
+   
+  total += price
+
+  console.log("Cart = ", total);
+}
+
+const removeCartItem = document.getElementsByClassName('btn-danger')
+const purchaseButton = document.getElementsByClassName('btn-purchase')
+const cartItemsClass = document.getElementsByClassName("cart-items")

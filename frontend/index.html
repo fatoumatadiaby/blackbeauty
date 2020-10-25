@@ -1,62 +1,59 @@
 <!DOCTYPE html>
- <html lang="en">
+<html lang="en">
   <head>
-     <link rel="stylesheet" href="style.css"> 
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     
-     <script src="src/cart.js"></script>
-     <script src="src/product.js"></script>
-     <script src="src/index.js"></script>
-    
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="src/cart.js"></script>
+    <script src="src/product.js"></script>
+    <script src="src/index.js"></script>
+
     <title>Shopping App</title>
-   </head>
+  </head>
   <body>
     <div class="container">
-       <div class="nav-wrapper">
-            <div class="left-side">
-                <div class="nav-link-wrapper">
-                     <a href="">Home</a>
-                </div>
-                <div class="nav-link-wrapper">
-                     <a href="">My Cart</a>
-                </div>
-            </div>
+      <div class="nav-wrapper">
+        <div class="left-side">
+          <div class="nav-link-wrapper">
+            <a href="">Home</a>
+          </div>
+          <div class="nav-link-wrapper">
+            <a href="">My Cart</a>
+          </div>
+        </div>
 
-            <div class="right-side">
-                <div class="brand">
-                  <div> Black</div>
-                </div>
-                <div class="brand">
-                  <div>Beauty</div>
-                </div>
-            </div>
-       </div>
-     <section class="product-inventory-and-cart-content"> 
-       <div id="product-inventory">
-           
+        <div class="right-side">
+          <div class="brand">
+            <div>Black</div>
+          </div>
+          <div class="brand">
+            <div>Beauty</div>
+          </div>
+        </div>
       </div>
+      <section class="product-inventory-and-cart-content">
+        <div id="product-inventory"></div>
 
-         <div class="cart-content">
-           <section class="container content-section">
+        <div class="cart-content">
+          <section class="container content-section">
             <h2 class="section-header">MY CART</h2>
             <div class="cart-row">
-                <span class="cart-item cart-header cart-column">ITEM</span>
-                <span class="cart-price cart-header cart-column">PRICE</span>
-                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+              <span class="cart-brand">ITEM</span>
+              <span class="cart-price">PRICE</span>
+              <!-- <span class="cart-quantity">QUANTITY</span> -->
             </div>
-            <div class="cart-items">
-            </div>
+            <ul class="cart-items"></ul>
             <div class="cart-total">
-                <strong class="cart-total-title">Total</strong>
-                <span class="cart-total-price">$0</span>
+              <strong class="cart-total-title">Total</strong>
+              <span class="cart-total-price">$0</span>
             </div>
-            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+            <button class="btn btn-primary btn-purchase" type="button">
+              PURCHASE
+            </button>
           </section>
         </div>
-       
-    </section>  
+      </section>
     </div>
-    
- </body>
-</html>   
+  </body>
+</html>
