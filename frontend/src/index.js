@@ -1,9 +1,9 @@
-const url = "http://localhost:3000";
+const url = "http://localhost:3000"; //set url for fetch method
 
-document.addEventListener("DOMContentLoaded", callOnLoad);
+document.addEventListener("DOMContentLoaded", callOnLoad); // add event listener to load 
 
 function callOnLoad() {
-  fetchProducts();
+  fetchProducts(); 
 }
 
 function addToCart(e) {

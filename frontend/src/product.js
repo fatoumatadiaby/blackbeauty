@@ -21,7 +21,7 @@ class Product {
            <br>
            <div class="brand-two">
              <h3> ${this.product_type}</h3>
-             <h3> ${this.price} </h3>
+             <h3> $${this.price} </h3>
             </div>
         </div>
         <div class="flip-card-back">
