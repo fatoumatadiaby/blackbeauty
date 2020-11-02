@@ -1,5 +1,4 @@
 
-/* NAV STYLES */
 .nav-wrapper {
     display: flex;
     justify-content: space-between;
@@ -62,45 +61,6 @@
     margin-top: 10px;
 }
 
-.cart-row {
-  display: flex;
-  justify-content: space-evenly;
-  padding: 10px;
-}
-
-
-.cart-item {
-    
-   width: 30%;
-}
-.cart-items {
-   flex-wrap: wrap;
-    display: flex;
-    justify-content: space-evenly;
-    
- }
-
-.cart-price {
-    padding-left: 45px;
-    padding-right: 25px;
-}
-
-.cart-quantity {
- padding-left: 30px;
-     padding-right: 25px;
-
-}
-.cart-brand {
- padding-left: 30px;
-     padding-right: 25px;
-
-}
-
-.cart-item-title {
-    color: #333;
-    margin-left: .5em;
-    font-size: 1.2em;
-}
 
 
 .btn-danger {
@@ -154,30 +114,57 @@
     font-size: 1.1em;
 }
 
- .cart-content {
+ .cart-container {
     flex-direction: column; 
      justify-content: center;
     border: 4px solid white;
-    width: 20%;
+    width: 30%;
     background-color: #fbeee6;
     padding: 30px; 
 
 }
-.container-content-section {
-    flex-wrap: wrap;
+.cart-row {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+}
+/* .cart-brand{
+    width: 50%;
+}
+.cart-price {
+    /* width: 50%; */
 
-     
+/* .cart-quantity { */
+    /* width: 50%; */
+
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
-/* Product Styling */
+.item{
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-name{
+    width: 50%;
+}
+
+.cart-item-title {
+    color: #333;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
 
 
 #product-inventory {
     background: #935116;
     padding: 30px;
-    width: 80%;
+    width: 70%;
     border: 4px solid white;
     display: flex;
     flex-wrap: wrap;
@@ -257,12 +244,12 @@
 
 .btn-primary {
     display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	padding: .5em 1em;
-	font-weight: 500;
-	text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: .5em 1em;
+    font-weight: 500;
+    text-decoration: none;
     color: black;
     background: #935116;
     border: 3px solid #fbeee6;

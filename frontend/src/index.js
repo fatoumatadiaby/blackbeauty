@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", callOnLoad); // add event listener
 
 function callOnLoad() {
   fetchProducts(); 
+  
 }
 
 function addToCart(e) {
@@ -25,6 +26,8 @@ function addToCart(e) {
     .then((cartData) => {
       new Cart(cartData.id, productId);
     });
+     
+      
 }
 
 function fetchProducts() {
@@ -33,6 +36,7 @@ function fetchProducts() {
     .then((products) => {
       products.data.forEach((product) => {
         let newProduct = new Product(product, product.attributes);
+        
         document.querySelector(
           "#product-inventory"
         ).innerHTML += newProduct.renderProduct();
@@ -42,6 +46,7 @@ function fetchProducts() {
       });
       fetchCarts();
     });
+    
 }
 
 function fetchCarts() {
@@ -51,5 +56,41 @@ function fetchCarts() {
       carts.data.forEach((cart) => {
         new Cart(cart.id, cart.attributes.product_id);
       });
+       removeProduct();
     });
 }
+function removeProduct() {
+  const deleteButton = document.getElementsByClassName("delete");  
+    [...deleteButton].forEach((r) => { 
+     r.addEventListener("click", removeFromCart)
+   })
+  }
+
+   function removeFromCart(e) {
+      const cartId = e.target.id
+       fetch(url + `/carts/${cartId}`,{
+         method: "DELETE",
+         headers: {
+           "Content-Type": "application/json",
+         },
+        
+       })        
+      
+         .then((r) => r.json())
+         .then((cartData) => {
+         console.log
+           const cartInstance = Cart.all.filter((cart) => cart.id == cartId); //
+           const productId = cartInstance[0].product_id.toString();//returned an id number just the number product id 
+           const singleProduct = Product.all[productId].price
+           Cart.all = Cart.all.filter((cart) => cart.id != cartId)
+           e.target.parentElement.remove();
+         
+           Cart.total -= singleProduct
+           const cartItemsClass = document.querySelector(".cart-items"); //find the class container of where cart product wil be stored
+           cartItemsClass.appendChild(document.querySelector(".cart-total-price").innerHTML = "$" + (Math.round(Cart.total * 100) / 100).toFixed(2)); 
+
+         });
+       
+   }
+
+  
